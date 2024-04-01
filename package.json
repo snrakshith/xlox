@@ -68,6 +68,7 @@
   "devDependencies": {
     "@craco/craco": "^7.1.0",
     "@types/prismjs": "^1.26.3",
+    "@types/react-router-dom": "^5.3.3",
     "autoprefixer": "^10.4.16",
     "path": "^0.12.7",
     "postcss": "^8.4.33",

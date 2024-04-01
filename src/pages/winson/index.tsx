@@ -1,11 +1,9 @@
 import WinsonModule from "@/modules/winson";
 
-const WinsonPage = () => {
+export const WinsonPage = () => {
   return (
     <div>
       <WinsonModule />
     </div>
   );
 };
-
-export default WinsonPage;
