@@ -8,6 +8,10 @@ export const zenCondition =
   subdomain === "zen" &&
   (routeIndentifer === undefined || routeIndentifer === "localhost");
 
+export const blogCondition =
+  subdomain === "blog" &&
+  (routeIndentifer === undefined || routeIndentifer === "localhost");
+
 export const studioCondition =
   subdomain === "studio" &&
   (routeIndentifer === undefined || routeIndentifer === "localhost");

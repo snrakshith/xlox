@@ -2,6 +2,7 @@
 module.exports = {
   darkMode: ["class"],
   content: [
+    // "./public/index.html",
     "./src/pages/**/*.{ts,tsx}",
     "./src/components/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
@@ -16,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      // fontFamily: {
+      //   Montserrat: "Montserrat",
+      // },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -72,5 +76,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("tailwind-scrollbar")],
 };
