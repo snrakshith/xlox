@@ -6,6 +6,7 @@ import ImageContent from "./components/features/image-content";
 import Segments from "./components/segments";
 import Services from "./components/services";
 import SpringLayout from "./core/layout";
+import CTA from "./components/cta";
 
 function SpringLandingPage() {
   return (
@@ -18,6 +19,7 @@ function SpringLandingPage() {
         <Segments />
         <Services />
         <FAQWithDropdown />
+        <CTA />
       </SpringLayout>
     </div>
   );

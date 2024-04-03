@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 import BlogFooter from "./blog-footer";
-import CTA from "../components/cta";
+import CTA from "../../xlox-site/components/cta";
 import BlogHeader from "./blog-header";
 
 export default function BlogLayout({ children }: { children: ReactNode }) {

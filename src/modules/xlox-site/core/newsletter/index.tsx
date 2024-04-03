@@ -1,58 +1,68 @@
 function Newsletter() {
   return (
-    <section className="bg-gray-50">
-      <div className="p-8 md:p-12 lg:px-16 lg:py-24">
-        <div className="mx-auto max-w-lg text-center">
-          <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit
+    <>
+      <div className="mx-auto my-16 max-w-7xl px-6 lg:px-8">
+        <div className="relative isolate overflow-hidden bg-gray-900 px-6 py-24 shadow-2xl rounded-2xl sm:rounded-3xl sm:px-24 xl:py-32">
+          <h2 className="mx-auto max-w-2xl text-center text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Keep Updated
           </h2>
 
-          <p className="hidden text-gray-500 sm:mt-4 sm:block">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae dolor
-            officia blanditiis repellat in, vero, aperiam porro ipsum laboriosam
-            consequuntur exercitationem incidunt tempora nisi?
+          <p className="mx-auto mt-2 max-w-xl text-center text-lg leading-8 text-gray-300">
+            Keep pace with Xlox advancements! Join our mailing list for
+            selective, noteworthy updates.
           </p>
-        </div>
 
-        <div className="mx-auto mt-8 max-w-xl">
-          <form action="#" className="sm:flex sm:gap-4">
-            <div className="sm:flex-1">
-              <label htmlFor="email" className="sr-only">
-                Email
-              </label>
-
-              <input
-                type="email"
-                placeholder="Email address"
-                className="w-full rounded-md border-gray-200 bg-white p-3 text-gray-700 shadow-sm transition focus:border-white focus:outline-none focus:ring focus:ring-yellow-400"
-              />
-            </div>
+          <form className="mx-auto mt-10 flex max-w-md gap-x-4">
+            <label htmlFor="email-address" className="sr-only">
+              Email address
+            </label>
+            <input
+              id="email-address"
+              name="email"
+              type="email"
+              autoComplete="email"
+              // required=""
+              className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+              placeholder="Enter your email"
+            />
 
             <button
               type="submit"
-              className="group mt-4 flex w-full items-center justify-center gap-2 rounded-md bg-rose-600 px-5 py-3 text-white transition focus:outline-none focus:ring focus:ring-yellow-400 sm:mt-0 sm:w-auto"
+              className="flex-none rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
-              <span className="text-sm font-medium"> Sign Up </span>
-
-              <svg
-                className="size-5 rtl:rotate-180"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
+              Notify me
             </button>
           </form>
+
+          <svg
+            viewBox="0 0 1024 1024"
+            className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2"
+            aria-hidden="true"
+          >
+            <circle
+              cx="512"
+              cy="512"
+              r="512"
+              fill="url(#759c1415-0410-454c-8f7c-9a820de03641)"
+              fill-opacity="0.7"
+            ></circle>
+            <defs>
+              <radialGradient
+                id="759c1415-0410-454c-8f7c-9a820de03641"
+                cx="0"
+                cy="0"
+                r="1"
+                gradientUnits="userSpaceOnUse"
+                gradientTransform="translate(512 512) rotate(90) scale(512)"
+              >
+                <stop stop-color="#7775D6"></stop>
+                <stop offset="1" stop-color="#7ED321" stop-opacity="0"></stop>
+              </radialGradient>
+            </defs>
+          </svg>
         </div>
       </div>
-    </section>
+    </>
   );
 }
 

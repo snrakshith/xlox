@@ -1,8 +1,8 @@
-import XloxLandingPage from "@/modules/xlox-site/landing-page";
 import { TutorPage } from "@/pages/tutor";
 import { WinsonPage } from "@/pages/winson";
 import { StudioPage } from "@/pages/studio";
 import { ZenPage } from "@/pages/zen";
+import { XloxPage } from "@/pages/xlox";
 
 import {
   studioCondition,
@@ -44,7 +44,7 @@ export default function PublicRouter() {
     } else if (tutorCondition) {
       return <TutorPage />;
     } else if (siteCondition) {
-      return <XloxLandingPage />;
+      return <XloxPage />;
     } else if (zenCondition) {
       return <ZenPage />;
     } else if (blogCondition) {
