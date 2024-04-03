@@ -4,7 +4,7 @@ import TestimonialsPage from "./testimonials";
 import TrustedBy from "./trusted-by";
 import TutorialPage from "./tutorial";
 import Newsletter from "@/components/misc/newsletter";
-import CTA from "./cta";
+
 import XloxHero from "./hero";
 
 export function XloxHomePage() {
@@ -44,7 +44,6 @@ export function XloxHomePage() {
         <Team />
       </div>
       <Newsletter />
-      <CTA />
     </>
   );
 }

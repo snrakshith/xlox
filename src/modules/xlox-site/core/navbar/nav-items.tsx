@@ -43,6 +43,10 @@ const components: { title: string; href: string; description: string }[] = [
 ];
 
 export function NavItems() {
+  const blogURL =
+    process.env.NODE_ENV === "development"
+      ? "http://blog.localhost:3000"
+      : "https://blog.xlox.in";
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -99,7 +103,14 @@ export function NavItems() {
         <NavigationMenuItem>
           <Link to="/price">
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Price
+              Pricing
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link to={blogURL}>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Blog
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
