@@ -6,7 +6,7 @@ export function ScrollToTopButton() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) {
+      if (window.scrollY > 700) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -29,7 +29,7 @@ export function ScrollToTopButton() {
     <div>
       {isVisible && (
         <button
-          className="fixed bottom-4 right-4 bg-blue-500 hover:bg-blue-600 text-white text-3xl p-4 rounded-full shadow-md focus:outline-none"
+          className="fixed bottom-4 right-4 bg-indigo-500 hover:bg-indigo-600 text-white text-3xl p-4 rounded-full shadow-md focus:outline-none"
           onClick={scrollToTop}
         >
           <FaArrowCircleUp />

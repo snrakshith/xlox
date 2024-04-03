@@ -7,7 +7,7 @@ export default function BlogModule() {
     <>
       <BlogLayout>
         <BlogHome />
-        <BlogDetails />
+        {/* <BlogDetails /> */}
       </BlogLayout>
     </>
   );

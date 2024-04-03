@@ -1,15 +1,14 @@
 import { ReactNode } from "react";
-
 import BlogFooter from "./blog-footer";
-import CTA from "../../xlox-site/components/cta";
 import BlogHeader from "./blog-header";
+import { ScrollToTopButton } from "@/components/misc/scroll-to-top";
 
 export default function BlogLayout({ children }: { children: ReactNode }) {
   return (
     <div>
       <BlogHeader />
       {children}
-      <CTA />
+      <ScrollToTopButton />
       <BlogFooter />
     </div>
   );

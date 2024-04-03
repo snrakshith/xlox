@@ -16,7 +16,7 @@ import WebDesignPage from "./simple/app/projects/web-design";
 import { NotFoundPage } from "@/pages/errors/error-page";
 import MessagesPage from "./simple/app/messages";
 import AccountPage from "./simple/app/settings/account";
-import { ScrollToTopButton } from "./simple/components/scroll-to-top";
+import { ScrollToTopButton } from "@/components/misc/scroll-to-top";
 import { Breadcrumbs } from "./simple/components/breadcrumbs";
 
 export default function StudioModule() {

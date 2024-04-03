@@ -1,11 +1,11 @@
-import Team from "./components/team";
-import WinsonLogo from "../../assets/overview.png";
-import TestimonialsPage from "./components/testimonials";
-import TrustedBy from "./components/trusted-by";
-import TutorialPage from "./components/tutorial";
-import Newsletter from "./core/newsletter";
-import CTA from "./components/cta";
-import XloxHero from "./components/hero";
+import Team from "./team";
+import WinsonLogo from "@/assets/overview.png";
+import TestimonialsPage from "./testimonials";
+import TrustedBy from "./trusted-by";
+import TutorialPage from "./tutorial";
+import Newsletter from "@/components/misc/newsletter";
+import CTA from "./cta";
+import XloxHero from "./hero";
 
 export function XloxHomePage() {
   return (

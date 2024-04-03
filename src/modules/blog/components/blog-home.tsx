@@ -1,15 +1,15 @@
-import ExclusiveOffer from "@/modules/xlox-site/core/pricing/components/banners/exclusive-offer";
-import PricingPlan from "@/modules/xlox-site/core/pricing/components/pricing-plans";
 import { BlogGrid } from "./blog-grid";
 import { BlogHero } from "./blog-hero";
+import Newsletter from "@/components/misc/newsletter";
+import { SearchBlog } from "./search-blog";
 
 export function BlogHome() {
   return (
     <>
       <BlogHero />
+      <SearchBlog />
       <BlogGrid title="Blogs." />
-      <PricingPlan />
-      <ExclusiveOffer />
+      <Newsletter />
     </>
   );
 }
