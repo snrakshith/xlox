@@ -3,15 +3,18 @@ import { NavItems } from "./nav-items";
 import { Button } from "@/components/ui/button";
 
 export default function XloxNavbar() {
+  // Redirect to the desired website
+  const redirectToWebsite = () => {
+    window.location.href = "https://calendly.com/vlockn/chat?month=2024-04";
+  };
   return (
     <div className="flex items-center justify-between w-full p-5 pb-0">
-      {/* <Announcments /> */}
       <SiteLogo />
       <div className="flex">
         <span className="me-5">
           <NavItems />
         </span>
-        <Button variant="outline" className="me-5">
+        <Button variant="outline" className="me-5" onClick={redirectToWebsite}>
           Schedule a Demo
         </Button>
         <Button variant="xlox">Try it out!</Button>
