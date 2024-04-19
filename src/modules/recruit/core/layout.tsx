@@ -6,7 +6,7 @@ import { ScrollToTopButton } from "@/components/misc/scroll-to-top";
 export default function RecruitLayout({ children }: { children: ReactNode }) {
   return (
     <div>
-      <BlogHeader />
+      {/* <BlogHeader /> */}
       {children}
       <ScrollToTopButton />
       <BlogFooter />

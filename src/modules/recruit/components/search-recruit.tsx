@@ -1,4 +1,4 @@
-export function SearchBlog() {
+export function SearchRecruit() {
   return (
     <section className="mt-12 lg:mt-24">
       <div className="bg-gray-800 text-white -skew-y-1">

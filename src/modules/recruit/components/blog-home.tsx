@@ -1,13 +1,13 @@
 import { BlogGrid } from "./blog-grid";
 import { BlogHero } from "./blog-hero";
 import Newsletter from "@/components/misc/newsletter";
-import { SearchBlog } from "./search-blog";
+import { SearchRecruit } from "./search-recruit";
 
 export function BlogHome() {
   return (
     <>
       <BlogHero />
-      <SearchBlog />
+      <SearchRecruit />
       <BlogGrid title="Blogs." />
       <Newsletter />
     </>
