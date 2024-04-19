@@ -16,6 +16,10 @@ export const studioCondition =
   subdomain === "studio" &&
   (routeIndentifer === undefined || routeIndentifer === "localhost");
 
+export const recruitCondition =
+  subdomain === "recruit" &&
+  (routeIndentifer === undefined || routeIndentifer === "localhost");
+
 export const siteCondition = routeIndentifer === undefined;
 
 export const schoolCondition = routeIndentifer === "sc";

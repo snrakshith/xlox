@@ -15,12 +15,14 @@ import {
   tutorSearchPage,
   zenCondition,
   blogCondition,
+  recruitCondition,
 } from "../route-map";
 import Search from "@/modules/fallback/search";
 import { NotFoundPage } from "@/pages/errors/error-page";
 import NotFound from "@/modules/fallback/not-found";
 import { BrowserRouter } from "react-router-dom";
 import BlogModule from "@/modules/blog";
+import RecruitModule from "@/modules/recruit";
 
 export default function PublicRouter() {
   const getTemplate = () => {
@@ -49,6 +51,8 @@ export default function PublicRouter() {
       return <ZenPage />;
     } else if (blogCondition) {
       return <BlogModule />;
+    } else if (recruitCondition) {
+      return <RecruitModule />;
     }
     // Show studio app for xlox platform
     else if (studioCondition) {
