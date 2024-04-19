@@ -101,7 +101,7 @@ export function NavItems() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link to="/price">
+          <Link to="/plans">
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Pricing
             </NavigationMenuLink>

@@ -9,7 +9,7 @@ export function XloxModule() {
     <XloxLayout>
       <Routes>
         <Route path="/" element={<XloxHomePage />} />
-        <Route path="/price" element={<PricingPage />} />
+        <Route path="/plans" element={<PricingPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </XloxLayout>
