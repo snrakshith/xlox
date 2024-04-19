@@ -1,15 +1,15 @@
 import { ReactNode } from "react";
-import BlogFooter from "./blog-footer";
-import BlogHeader from "./blog-header";
+import RecruitFooter from "./recruit-footer";
+import RecruitHeader from "./recruit-header";
 import { ScrollToTopButton } from "@/components/misc/scroll-to-top";
 
 export default function RecruitLayout({ children }: { children: ReactNode }) {
   return (
-    <div>
-      {/* <BlogHeader /> */}
+    <>
+      <RecruitHeader />
       {children}
       <ScrollToTopButton />
-      <BlogFooter />
-    </div>
+      <RecruitFooter />
+    </>
   );
 }

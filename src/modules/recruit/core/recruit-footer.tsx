@@ -1,4 +1,4 @@
-export default function BlogFooter() {
+export default function RecruitFooter() {
   return (
     <div className="px-6 pt-16 mx-auto w-full sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div className="flex justify-between pt-5 pb-10 border-t lg:flex-row">

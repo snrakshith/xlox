@@ -1,8 +1,8 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-export function BlogLogo() {
+export function RecruitLogo() {
   return (
-    <Avatar>
+    <Avatar className="h-8 w-8">
       <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
       <AvatarFallback>CN</AvatarFallback>
     </Avatar>
