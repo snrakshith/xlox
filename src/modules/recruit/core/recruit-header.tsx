@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 export default function RecruitHeader() {
   return (
     <>
-      <div className="bg-slate-200 flex items-center justify-between p-2">
+      <div className="bg-white flex items-center justify-between p-3">
         <div className="flex items-center ms-5">
           <RecruitLogo />
           <span className="font-bold text-lg ms-3">recruit</span>
@@ -29,7 +29,7 @@ export default function RecruitHeader() {
         </div>
         <div className="flex items-center gap-2">
           <input
-            className="p-3 rounded-full h-8"
+            className="p-3 rounded-full h-8 bg-slate-100"
             type="text"
             name=""
             id=""
@@ -38,7 +38,9 @@ export default function RecruitHeader() {
           <Button variant="xlox" className="rounded-full h-8">
             Post Jobs
           </Button>
-          <RecruitLogo />
+          <span className="me-5">
+            <RecruitLogo />
+          </span>
         </div>
       </div>
     </>

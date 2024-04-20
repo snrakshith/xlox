@@ -1,8 +1,23 @@
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Link, Pencil, SquareArrowOutUpRight } from "lucide-react";
 import SampleLogo from "@/assets/overview.png";
+import { Progress } from "@/components/ui/progress";
+import RouteTab from "./route-tab";
+import Overview from "./feature-tabs/overview";
+import { useState } from "react";
+import Jobs from "./feature-tabs/jobs";
+import Reviews from "./feature-tabs/reviews";
+import About from "./feature-tabs/about";
+import Photos from "./feature-tabs/photos";
+import Salaries from "./feature-tabs/salaries";
 
 export function RecruitDetails() {
+  const [activeTab, setActiveTab] = useState("overview");
+
+  const handleTabClick = (tabName: string) => {
+    setActiveTab(tabName);
+  };
+
   return (
     <>
       <div className="w-full mx-auto relative">
@@ -15,7 +30,7 @@ export function RecruitDetails() {
           <Button variant={"outline"} className="w-12 h-12 rounded-full">
             <ArrowLeft />
           </Button>
-          <Button variant={"outline"}>
+          <Button variant={"outline"} className="rounded-full text-blue-600">
             Go to website
             <SquareArrowOutUpRight size={20} className="ms-2" />
           </Button>
@@ -69,23 +84,27 @@ export function RecruitDetails() {
                   alt="logo"
                 />
               </div>
-              <div className="my-5">
-                <h1 className="text-base font-bold">About Recruit</h1>
-                <p className="text-sm leading-8">
-                  UI/UX designers - how would you like to work within a
-                  successful SaaS based firm in downtown Toronto, building
-                  customized tools for on of the largest geonomics sequencing
-                  projects in the world? UI/UX designers - how would you like to
-                  work within a successful SaaS based firm in downtown Toronto,
-                  building customized tools for on of the largest geonomics
-                  sequencing projects in the world?
-                </p>
+
+              {/* Tabs */}
+              <div className="mt-10">
+                <RouteTab
+                  activeTab={activeTab}
+                  handleTabClick={handleTabClick}
+                />
               </div>
-              <blockquote className="border-l-4 text-base italic leading-8 my-5 p-5 text-indigo-600">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
-              </blockquote>
+
+              <div className="my-5">
+                {activeTab === "overview" && (
+                  <>
+                    <Overview />
+                  </>
+                )}
+                {activeTab === "about" && <About />}
+                {activeTab === "salaries" && <Salaries />}
+                {activeTab === "jobs" && <Jobs />}
+                {activeTab === "reviews" && <Reviews />}
+                {activeTab === "photos" && <Photos title="Photos" />}
+              </div>
             </div>
             <div className="flex flex-col gap-2">
               {/* Information */}
@@ -109,7 +128,33 @@ export function RecruitDetails() {
                 <h1 className="text-gray-900 text-base font-bold mb-2">
                   Employees by gender
                 </h1>
-                <div className=""></div>
+                <div className="flex flex-col my-5">
+                  <div className="flex gap-2">
+                    <Progress value={58} className="bg-green-400" />
+                    <Progress value={38} className="bg-orange-400" />
+                    <Progress value={4} className="bg-gray-400" />
+                  </div>
+                  <div className="mt-5 flex items-start justify-between">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-green-400" />
+                      <h3 className="text-gray-400 text-xs font-bold">
+                        Male <b className="text-gray-500">58%</b>
+                      </h3>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-orange-400" />
+                      <h3 className="text-gray-400 text-xs font-bold">
+                        Female <b className="text-gray-500">38%</b>
+                      </h3>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-gray-400" />
+                      <h3 className="text-gray-400 text-xs font-bold">
+                        Others <b className="text-gray-500">4%</b>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
               </div>
               {/* Location */}
               <div className="mx-12 rounded-lg bg-zinc-100 w-[350px] h-2/6 p-5">

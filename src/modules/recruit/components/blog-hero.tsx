@@ -1,98 +1,56 @@
-import RandomImage from "@/assets/300.jpeg";
+/**
+ * @see https://tailwindflex.com/@steven-kuhn/about-me-section
+ */
 
 export function BlogHero() {
   return (
-    <div className="p-24 px-0 relative overflow-hidden">
-      {/* <div className="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48"> */}
-      <div className="pt-20 pb-80">
-        <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
-          <div className="sm:max-w-lg">
-            <h1 className="font text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Svelte signals are finally here
-            </h1>
-            <p className="mt-4 text-xl text-gray-500">
-              This year, our new svelte signals will shelter you from the harsh
-              elements of a world that doesn't care if you develop or die.
+    <section className="pt-10 overflow-hidden bg-gray-50 dark:bg-gray-800 md:pt-0 sm:pt-16 2xl:pt-16">
+      <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div className="grid items-center grid-cols-1 md:grid-cols-2">
+          <div>
+            <h2 className="text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl lg:text-5xl">
+              Hey 👋 I am
+              <br className="block sm:hidden" />
+              Jenny Carter
+            </h2>
+            <p className="max-w-lg mt-3 text-xl leading-relaxed text-gray-600 dark:text-gray-300 md:mt-8">
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
+              Exercitation veniam consequat sunt nostrud amet.
+            </p>
+
+            <p className="mt-4 text-xl text-gray-600 dark:text-gray-300 md:mt-8">
+              <span className="relative inline-block">
+                <span className="absolute inline-block w-full bottom-0.5 h-2 bg-yellow-300 dark:bg-gray-900"></span>
+                <span className="relative"> Have a question? </span>
+              </span>
+              <br className="block sm:hidden" />
+              Ask me on{" "}
+              <a
+                href="#"
+                title=""
+                className="transition-all duration-200 text-sky-500 dark:text-sky-400 hover:text-sky-600 dark:hover:text-sky-500 hover:underline"
+              >
+                Twitter
+              </a>
             </p>
           </div>
-          <div>
-            <div className="mt-10">
-              {/* <!-- Decorative image grid --> */}
-              <div
-                aria-hidden="true"
-                className="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl"
-              >
-                <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
-                  <div className="flex items-center space-x-6 lg:space-x-8">
-                    <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                      <div className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
-                        <img
-                          src={RandomImage}
-                          className="h-full w-full object-cover object-center"
-                          alt=""
-                        />
-                      </div>
-                      <div className="h-64 w-44 overflow-hidden rounded-lg">
-                        <img
-                          src="https://placekeanu.com/200/300"
-                          alt=""
-                          className="h-full w-full object-cover object-center"
-                        />
-                      </div>
-                    </div>
-                    <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                      <div className="h-64 w-44 overflow-hidden rounded-lg">
-                        <img
-                          src="https://placekeanu.com/684/350/"
-                          alt=""
-                          className="h-full w-full object-cover object-center"
-                        />
-                      </div>
-                      <div className="h-64 w-44 overflow-hidden rounded-lg">
-                        <img
-                          src="https://placekeanu.com/250/350/y"
-                          alt=""
-                          className="h-full w-full object-cover object-center"
-                        />
-                      </div>
-                      <div className="h-64 w-44 overflow-hidden rounded-lg">
-                        <img
-                          src={RandomImage}
-                          alt=""
-                          className="h-full w-full object-cover object-center"
-                        />
-                      </div>
-                    </div>
-                    <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                      <div className="h-64 w-44 overflow-hidden rounded-lg">
-                        <img
-                          src="https://placekeanu.com/684/350/y"
-                          alt=""
-                          className="h-full w-full object-cover object-center"
-                        />
-                      </div>
-                      <div className="h-64 w-44 overflow-hidden rounded-lg">
-                        <img
-                          src="https://placebear.com/684/350"
-                          alt=""
-                          className="h-full w-full object-cover object-center"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              <a
-                href="/"
-                className="inline-block rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-center font-medium text-white hover:bg-indigo-700"
-              >
-                Read more
-              </a>
-            </div>
+          <div className="relative">
+            <img
+              className="absolute inset-x-0 bottom-0 -mb-48 -translate-x-1/2 left-1/2"
+              src="https://cdn.rareblocks.xyz/collection/celebration/images/team/1/blob-shape.svg"
+              alt=""
+            />
+
+            <img
+              className="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110"
+              src="https://cdn.rareblocks.xyz/collection/celebration/images/team/1/business-woman.png"
+              alt=""
+            />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
