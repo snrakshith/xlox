@@ -1,7 +1,9 @@
+import { JobOpeningsPage } from "./job-openings";
+
 export default function Jobs() {
   return (
     <div>
-      <p>Jobs</p>
+      <JobOpeningsPage />
     </div>
   );
 }

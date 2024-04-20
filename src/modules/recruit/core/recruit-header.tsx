@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { Home } from "lucide-react";
 import { RecruitLogo } from "../components/recruit-logo";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogTrigger } from "@/components/ui/dialog";
+import { CreateJobPosting } from "../components/create-job-post";
 
 export default function RecruitHeader() {
   return (
@@ -35,9 +37,7 @@ export default function RecruitHeader() {
             id=""
             placeholder="Search here..."
           />
-          <Button variant="xlox" className="rounded-full h-8">
-            Post Jobs
-          </Button>
+          <CreateJobPosting />
           <span className="me-5">
             <RecruitLogo />
           </span>

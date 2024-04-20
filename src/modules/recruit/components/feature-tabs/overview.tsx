@@ -1,3 +1,5 @@
+import { JobOpeningsPage } from "./job-openings";
+
 export default function Overview() {
   return (
     <>
@@ -16,6 +18,8 @@ export default function Overview() {
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s
       </blockquote>
+
+      <JobOpeningsPage />
     </>
   );
 }
