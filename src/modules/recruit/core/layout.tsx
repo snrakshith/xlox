@@ -3,7 +3,7 @@ import RecruitFooter from "./recruit-footer";
 import RecruitHeader from "./recruit-header";
 import { ScrollToTopButton } from "@/components/misc/scroll-to-top";
 
-export default function RecruitLayout({ children }: { children: ReactNode }) {
+export function RecruitLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <RecruitHeader />

@@ -7,7 +7,7 @@ import OSC from "./home/our-services-component";
 import CTABlock from "./home/cta-block";
 import UserAvatar from "./home/user-avatar";
 
-export function BlogHome() {
+export function RecruitHome() {
   return (
     <>
       <BlogHero />
