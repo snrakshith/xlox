@@ -9,7 +9,7 @@ export function TutorModule() {
     <TutorLayout>
       <Routes>
         <Route path="/" element={<TutorHome />} />
-        <Route path="/jobs/:tutorId" element={<TutorDetails />} />
+        <Route path="/jobs" element={<TutorDetails />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </TutorLayout>
