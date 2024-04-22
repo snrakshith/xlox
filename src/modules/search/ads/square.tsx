@@ -1,21 +1,21 @@
 import { ChevronRight, Star } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 
-export default function SchoolAds() {
-  const navigate = useNavigate();
+export default function SquareAds() {
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
+    const newUrl = `http://tpps.sc.localhost:3000`;
+    // Redirect to the new URL
+    window.location.href = newUrl;
+  };
   return (
     <div
-      onClick={() => navigate(`tpps.sc.localhost:3000`)}
+      onClick={handleSubmit}
       className="bg-white z-50 rounded-2xl w-[425px] h-[100px] flex items-center justify-around"
     >
       <div className="flex items-center">
-        <img
-          src="https://img.naukimg.com/logo_images/groups/v1/429962.gif"
-          alt="company_logo"
-          className="rounded-md border border-1 h-16"
-        />
         <div className="ms-3 flex flex-col items-start">
           <h3 className="font-semibold text-xl text-black">Leap</h3>
+          <ChevronRight />
           <span className="flex items-center my-2">
             <Star className="text-orange-400" size={10} fill="orange" />
             <h3 className="ms-2 font-normal text-xs text-gray-500">
@@ -36,7 +36,11 @@ export default function SchoolAds() {
         </div>
       </div>
       <div className="">
-        <ChevronRight />
+        <img
+          src="https://img.naukimg.com/logo_images/groups/v1/429962.gif"
+          alt="company_logo"
+          className="rounded-md border border-1 h-16"
+        />
       </div>
     </div>
   );
