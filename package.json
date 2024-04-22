@@ -52,11 +52,11 @@
     "zod": "^3.22.4"
   },
   "scripts": {
-    "start": "env-cmd -f ./src/utils/environments/.env.dev craco start",
+    "dev": "env-cmd -f ./src/utils/environments/.env.dev craco start",
+    "start": "env-cmd -f ./src/utils/environments/.env.prod craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject",
-    "start:local": "env-cmd -f ./src/utils/environments/.env.local craco start"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

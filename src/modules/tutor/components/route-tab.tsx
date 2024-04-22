@@ -30,13 +30,13 @@ export default function RouteTab({ activeTab, handleTabClick }: any) {
           role="tab"
           type="button"
           className={`flex whitespace-nowrap items-center h-8 px-5 font-medium rounded-lg outline-none focus:ring-2 focus:ring-yellow-600 focus:ring-inset ${
-            activeTab === "jobs"
+            activeTab === "experience"
               ? "text-yellow-600 shadow bg-white dark:text-white dark:bg-yellow-600"
               : "hover:text-gray-800 focus:text-yellow-600 dark:text-gray-400 dark:hover:text-gray-300 dark:focus:text-gray-400"
           }`}
-          onClick={() => handleTabClick("jobs")}
+          onClick={() => handleTabClick("experience")}
         >
-          Jobs
+          Experience
         </button>
         <button
           role="tab"
@@ -66,13 +66,13 @@ export default function RouteTab({ activeTab, handleTabClick }: any) {
           role="tab"
           type="button"
           className={`flex whitespace-nowrap items-center h-8 px-5 font-medium rounded-lg outline-none focus:ring-2 focus:ring-yellow-600 focus:ring-inset ${
-            activeTab === "photos"
+            activeTab === "media"
               ? "text-yellow-600 shadow bg-white dark:text-white dark:bg-yellow-600"
               : "hover:text-gray-800 focus:text-yellow-600 dark:text-gray-400 dark:hover:text-gray-300 dark:focus:text-gray-400"
           }`}
-          onClick={() => handleTabClick("photos")}
+          onClick={() => handleTabClick("media")}
         >
-          Photos
+          Media
         </button>
       </nav>
     </div>

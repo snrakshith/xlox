@@ -1,4 +1,4 @@
-import { ChevronRight, Star } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 export default function SquareAds() {
   const handleSubmit = (event: any) => {
