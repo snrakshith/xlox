@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import AllApps from "./pages/AllApps";
 import Authentication from "./pages/Authentication";
 import Stroage from "./pages/Stroage";
-import { Settings } from "../tutor/settings";
+
 import Build from "./pages/Build";
 import Analytics from "./pages/Analytics";
 import "./core/_/index.css";
@@ -46,7 +46,7 @@ export default function StudioModule() {
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/projects/web-design" element={<WebDesignPage />} />
             <Route path="/messages" element={<MessagesPage />} />
-            <Route path="/settings" element={<Settings />} />
+            {/* <Route path="/settings" element={<Settings />} /> */}
             <Route path="/settings/account" element={<AccountPage />} />
             <Route path="/analytics/:aID" element={<Analytics />} />
             <Route path="*" element={<NotFoundPage />} />
