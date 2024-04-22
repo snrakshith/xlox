@@ -10,17 +10,18 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Platforms } from "../components/platforms";
 
-export function InviteTeamMember() {
+export function CreateJobPosting() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">Invite</Button>
+        <Button variant="xlox" className="rounded-full h-8">
+          Post Jobs
+        </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Invite Team Member</DialogTitle>
+          <DialogTitle>Edit profile</DialogTitle>
           <DialogDescription>
             Make changes to your profile here. Click save when you're done.
           </DialogDescription>
@@ -28,19 +29,27 @@ export function InviteTeamMember() {
         <div className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="name" className="text-right">
-              Username
+              Name
             </Label>
-            <Input id="name" value="Pedro Duarte" className="col-span-3" />
+            <Input
+              id="name"
+              defaultValue="Pedro Duarte"
+              className="col-span-3"
+            />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
             <Label htmlFor="username" className="text-right">
-              Select Scope
+              Username
             </Label>
-            <Platforms />
+            <Input
+              id="username"
+              defaultValue="@peduarte"
+              className="col-span-3"
+            />
           </div>
         </div>
         <DialogFooter>
-          <Button type="submit">Send</Button>
+          <Button type="submit">Save changes</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
