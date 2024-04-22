@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-
+import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 // import { Icons } from "@/components/icons";
 import {
@@ -13,40 +13,36 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { Link } from "react-router-dom";
+import { generateBaseURL } from "@/utils/generateBaseURL";
 
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Winson",
-    href: "/docs/primitives/alert-dialog",
+    href: generateBaseURL("studio"),
     description:
       "A modal dialog that interrupts the user with important content and expects a response.",
   },
   {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
+    title: "School search",
+    href: generateBaseURL("sc"),
     description:
       "For sighted users to preview content available behind a link.",
   },
   {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
+    title: "Tutor search",
+    href: generateBaseURL("tu"),
     description:
       "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
   },
   {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
+    title: "Recruit",
+    href: generateBaseURL("recruit"),
     description:
       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   },
 ];
 
 export function NavItems() {
-  const blogURL =
-    process.env.NODE_ENV === "development"
-      ? "http://blog.localhost:3000"
-      : "https://blog.xlox.in";
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -108,7 +104,7 @@ export function NavItems() {
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link to={blogURL}>
+          <Link to={generateBaseURL("blog")}>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Blog
             </NavigationMenuLink>
@@ -127,6 +123,7 @@ const ListItem = React.forwardRef<
     <li>
       <NavigationMenuLink asChild>
         <a
+          target="_blank"
           ref={ref}
           className={cn(
             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",

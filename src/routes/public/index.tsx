@@ -1,3 +1,4 @@
+import { BrowserRouter } from "react-router-dom";
 import { TutorPage } from "@/pages/tutor";
 import { WinsonPage } from "@/pages/winson";
 import { StudioPage } from "@/pages/studio";
@@ -17,10 +18,11 @@ import {
   blogCondition,
   recruitCondition,
 } from "../route-map";
-import Search from "@/modules/fallback/search";
+
+// Serch app
+import { SearchPage } from "@/modules/search";
+import NotFound from "@/modules/search/components/not-found";
 import { NotFoundPage } from "@/pages/errors/error-page";
-import NotFound from "@/modules/fallback/not-found";
-import { BrowserRouter } from "react-router-dom";
 import BlogModule from "@/modules/blog";
 import RecruitModule from "@/modules/recruit";
 
@@ -35,14 +37,14 @@ export default function PublicRouter() {
     } else if (schoolSearchPage) {
       return (
         <>
-          <Search term="school" />
+          <SearchPage term="school" />
         </>
       );
     } else if (tutorNotFound) {
       return <NotFound term="Tutor" />;
       // Search tutor page
     } else if (tutorSearchPage) {
-      return <Search term="tutor" />;
+      return <SearchPage term="tutor" />;
     } else if (tutorCondition) {
       return <TutorPage />;
     } else if (siteCondition) {

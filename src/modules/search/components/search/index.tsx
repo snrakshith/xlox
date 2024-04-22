@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Search({ term }: any) {
+export function Search({ term }: { term: string }) {
   const [item, setItem] = useState("");
   const identifer = term === "school" ? "sc" : "tu";
 
