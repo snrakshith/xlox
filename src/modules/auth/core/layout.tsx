@@ -7,14 +7,10 @@ export default function AuthLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`bg-white`}>
-        <div className="flex flex-col">
-          <AuthNavbar />
-          <main className="flex-1">{children}</main>
-          <AuthFooter />
-        </div>
-      </body>
-    </html>
+    <div className="flex flex-col bg-slate-50">
+      <AuthNavbar />
+      <main className="flex-1">{children}</main>
+      <AuthFooter />
+    </div>
   );
 }

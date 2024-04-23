@@ -3,12 +3,12 @@ import { RegisterForm } from "./pages/register";
 
 export function AuthPage() {
   return (
-    <div className="w-full h-full flex-col bg-slate-100">
-      <div className="flex">
+    <div className="p-5 flex w-full bg-slate-100 h-full justify-evenly items-center">
+      <div className="w-5/12 flex items-center justify-center">
         <CardAds />
-        <div className="rounded-sm w-8/12 h-screen flex justify-center items-center ">
-          <RegisterForm />
-        </div>
+      </div>
+      <div className="w-9/12">
+        <RegisterForm />
       </div>
     </div>
   );
