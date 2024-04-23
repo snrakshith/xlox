@@ -1,6 +1,5 @@
-import AuthPage from "@/pages/auth";
+import { AuthModule } from "@/modules/auth";
 import { StudioLayout } from "./core/layout";
-import RootLayout from "./core/_/layouts/RootLayout";
 import { Route, Routes } from "react-router-dom";
 import AllApps from "./pages/AllApps";
 import Authentication from "./pages/Authentication";
@@ -8,7 +7,6 @@ import Stroage from "./pages/Stroage";
 
 import Build from "./pages/Build";
 import Analytics from "./pages/Analytics";
-import "./core/_/index.css";
 import SimpleRootLayout from "./simple/app/layout";
 import Home from "./simple/app/home";
 import ProjectsPage from "./simple/app/projects";
@@ -18,18 +16,19 @@ import MessagesPage from "./simple/app/messages";
 import AccountPage from "./simple/app/settings/account";
 import { ScrollToTopButton } from "@/components/misc/scroll-to-top";
 import { Breadcrumbs } from "./simple/components/breadcrumbs";
+import AuthLayout from "../auth/core/layout";
 
 export default function StudioModule() {
-  const loggedIn = false;
+  const loggedIn = true;
   return (
     <div>
       {loggedIn ? (
-        <>
-          <AuthPage />
-        </>
+        <AuthLayout>
+          <AuthModule />
+        </AuthLayout>
       ) : (
         // <StudioLayout>
-        // <RootLayout>
+
         //   <Routes>
         //     <Route path="/" element={<AllApps />} />
         //     <Route path="/authentication" element={<Authentication />} />
@@ -38,7 +37,7 @@ export default function StudioModule() {
         //     <Route path="/build/:bID" element={<Build />} />
         //     <Route path="/analytics/:aID" element={<Analytics />} />
         //   </Routes>
-        // </RootLayout>
+
         <SimpleRootLayout>
           <Breadcrumbs />
           <Routes>
