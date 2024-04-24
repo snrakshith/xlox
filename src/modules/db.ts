@@ -1,3 +1,10 @@
+export const ccDB = [
+  {
+    username: "nm3",
+    published: false,
+  },
+];
+
 export const schoolDB = [
   {
     username: "tpps",

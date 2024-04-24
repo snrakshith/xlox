@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export function Search({ term }: { term: string }) {
   const [item, setItem] = useState("");
-  const identifer = term === "school" ? "sc" : "tu";
+  const identifer = term === "school" ? "sc" : term === "tutor" ? "tu" : "cc";
 
   const handleSubmit = (event: any) => {
     event.preventDefault();

@@ -1,4 +1,4 @@
-import { schoolDB, tutorDB } from "@/modules/db";
+import { schoolDB, tutorDB, ccDB } from "@/modules/db";
 
 // Parse subdomain from URL
 export const subdomain = window.location.hostname.split(".")[0];
@@ -26,6 +26,11 @@ export const schoolCondition = routeIndentifer === "sc";
 export const schoolSearchPage = subdomain === "sc";
 export const schoolNotFound =
   schoolCondition && schoolDB.every((school) => school.username !== subdomain);
+
+export const ccCondition = routeIndentifer === "cc";
+export const ccSearchPage = subdomain === "cc";
+export const ccNotFound =
+  ccCondition && ccDB.every((cc) => cc.username !== subdomain);
 
 export const tutorCondition = routeIndentifer === "tu";
 export const tutorSearchPage = subdomain === "tu";

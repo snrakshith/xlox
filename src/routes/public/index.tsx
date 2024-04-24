@@ -17,6 +17,9 @@ import {
   zenCondition,
   blogCondition,
   recruitCondition,
+  ccNotFound,
+  ccSearchPage,
+  ccCondition,
 } from "../route-map";
 
 // Serch app
@@ -25,6 +28,7 @@ import NotFound from "@/modules/search/components/not-found";
 import { NotFoundPage } from "@/pages/errors/error-page";
 import BlogModule from "@/modules/blog";
 import RecruitModule from "@/modules/recruit";
+import { CCModule } from "@/modules/coaching-center";
 
 export default function PublicRouter() {
   const getTemplate = () => {
@@ -47,6 +51,13 @@ export default function PublicRouter() {
       return <SearchPage term="tutor" />;
     } else if (tutorCondition) {
       return <TutorPage />;
+    } else if (ccNotFound) {
+      return <NotFound term="Coaching Class" />;
+      // Search tutor page
+    } else if (ccSearchPage) {
+      return <SearchPage term="Coaching Class" />;
+    } else if (ccCondition) {
+      return <CCModule />;
     } else if (siteCondition) {
       return <XloxPage />;
     } else if (zenCondition) {
