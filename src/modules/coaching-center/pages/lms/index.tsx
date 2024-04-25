@@ -1,13 +1,16 @@
 import {
   CircleCheckBig,
+  CircleDollarSign,
   CirclePlus,
   Clock,
   CloudUpload,
+  File,
   GripVertical,
   LayoutDashboard,
   ListChecks,
   Pencil,
   Trash,
+  X,
 } from "lucide-react";
 import { CourseCard } from "./card/course-card";
 import { Button } from "@/components/ui/button";
@@ -180,10 +183,23 @@ export function CourseCreationBody() {
           16:9 aspect ratio recommended
         </h3>
       </div>
+      {/* Category */}
+      <div className="bg-gray-200 w-[500px] h-[100px] rounded-lg p-5">
+        <div className="flex justify-between">
+          <div>
+            <h3 className="text-sm font-medium">Course category</h3>
+          </div>
+          <div className="flex items-center">
+            <Pencil size={16} />
+            <h3 className="ms-2 text-sm font-semibold">edit category</h3>
+          </div>
+        </div>
+        <h3 className="my-4 text-sm font-medium text-gray-600">Computer</h3>
+      </div>
     </div>
   );
 }
-export function CourseCreationSideB() {
+export function CourseChapters() {
   return (
     <div className="w-full flex flex-col p-5 gap-5">
       <div className="flex">
@@ -191,7 +207,7 @@ export function CourseCreationSideB() {
         <h1 className="ms-2 font-medium text-2xl">Course chapters</h1>
       </div>
       {/* Image */}
-      <div className="bg-gray-200 w-[500px] h-[300px] rounded-lg p-5">
+      <div className="bg-gray-200 w-[500px] min-h-300 h-auto rounded-lg p-5">
         <div className="flex justify-between">
           <div>
             <h3 className="text-sm font-medium">Course chapters</h3>
@@ -201,21 +217,138 @@ export function CourseCreationSideB() {
             <h3 className="ms-2 text-sm font-semibold">Add a chapter</h3>
           </div>
         </div>
-        <div className="my-5 p-2 flex flex-col items-center">
-          <div className="w-full flex justify-around bg-blue-200">
-            <GripVertical size={16} /> Outro
-            <div className="p-1 bg-black text-white w-auto rounded-full h-6 text-xs">
-              Free
+        <div className="my-5 gap-5 flex flex-col items-center">
+          <div className="p-4 w-full flex justify-between bg-blue-200">
+            <span className="flex items-center">
+              <GripVertical size={16} className="text-blue-500" />
+              <h3 className="ms-2 text-blue-500">Outro</h3>
+            </span>
+            <div className="flex gap-3 items-center">
+              <h3 className="p-1 bg-black text-white text-center w-[40px] rounded-full h-6 text-xs">
+                Free
+              </h3>
+              <h3 className="p-1 bg-blue-700 text-white text-center w-[80px] rounded-full h-6 text-xs">
+                Published
+              </h3>
+              <Pencil size={16} />
             </div>
-            <div className="p-1 bg-blue-700 text-white w-auto rounded-full h-6 text-xs">
-              Published
+          </div>
+          {/* Extra */}
+          <div className="p-4 w-full flex justify-between bg-blue-200">
+            <span className="flex items-center">
+              <GripVertical size={16} className="text-blue-500" />
+              <h3 className="ms-2 text-blue-500">Introduction</h3>
+            </span>
+            <div className="flex gap-3 items-center">
+              <h3 className="p-1 bg-black text-white text-center w-[50px] rounded-full h-6 text-xs">
+                Draft
+              </h3>
+              <Pencil size={16} />
             </div>
-            <Pencil size={16} />
+          </div>
+          {/* Extra */}
+          <div className="p-4 w-full flex justify-between bg-blue-200">
+            <span className="flex items-center">
+              <GripVertical size={16} className="text-blue-500" />
+              <h3 className="ms-2 text-blue-500">Outro</h3>
+            </span>
+            <div className="flex gap-3 items-center">
+              <h3 className="p-1 bg-blue-700 text-white text-center w-[80px] rounded-full h-6 text-xs">
+                Published
+              </h3>
+              <Pencil size={16} />
+            </div>
+          </div>
+          {/* Extra */}
+          <div className="p-4 w-full flex justify-between bg-blue-200">
+            <span className="flex items-center">
+              <GripVertical size={16} className="text-blue-500" />
+              <h3 className="ms-2 text-blue-500">Outro</h3>
+            </span>
+            <div className="flex gap-3 items-center">
+              <h3 className="p-1 bg-blue-700 text-white text-center w-[80px] rounded-full h-6 text-xs">
+                Published
+              </h3>
+              <Pencil size={16} />
+            </div>
           </div>
         </div>
-        <h3 className="my-4 text-sm font-medium text-gray-600">
+        <h3 className="text-sm font-medium text-gray-600">
           Drag and drop to reorder chapters
         </h3>
+      </div>
+    </div>
+  );
+}
+export function SellYourCourse() {
+  return (
+    <div className="w-full flex flex-col p-5 gap-5">
+      <div className="flex items-center">
+        <CircleDollarSign size={30} />
+        <h1 className="ms-2 font-medium text-2xl">Sell your course</h1>
+      </div>
+      <div className="bg-gray-200 w-[500px] h-[100px] rounded-lg p-5">
+        <div className="flex justify-between">
+          <div>
+            <h3 className="text-sm font-bold">Course price</h3>
+          </div>
+          <div className="flex items-center">
+            <Pencil size={16} />
+            <h3 className="ms-2 text-sm font-semibold">Edit price</h3>
+          </div>
+        </div>
+        <h3 className="my-4 text-sm font-bold text-gray-600">$93.50</h3>
+      </div>
+    </div>
+  );
+}
+export function CourseAttachments() {
+  return (
+    <div className="w-full flex flex-col p-5 gap-5">
+      <div className="flex items-center">
+        <File size={30} />
+        <h1 className="ms-2 font-medium text-2xl">Resources & Attachments</h1>
+      </div>
+      <div className="bg-gray-200 w-[500px] min-h-[50px] h-auto rounded-lg p-5">
+        <div className="flex justify-between">
+          <div>
+            <h3 className="text-sm font-bold">Course attachments</h3>
+          </div>
+          <div className="flex items-center">
+            <CirclePlus size={16} />
+            <h3 className="ms-2 text-sm font-semibold">Add a file</h3>
+          </div>
+        </div>
+        {/* Extra */}
+        <div className="mt-5 mb-0 p-4 w-full flex justify-between items-center bg-blue-200">
+          <span className="flex items-center text-blue-500">
+            <File size={16} />
+            <h3 className="ms-2">Sample Attachment</h3>
+          </span>
+          <span className="text-blue-500">
+            <X size={16} />
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Not in use
+export function EditCourseCategory() {
+  return (
+    <div className="w-full flex flex-col gap-5">
+      <div className="bg-gray-200 w-[500px] min-h-[50px] h-auto rounded-lg p-5">
+        <div className="flex justify-between">
+          <div>
+            <h3 className="text-sm font-bold">Course category</h3>
+          </div>
+          <div className="flex items-center">
+            <Pencil size={16} />
+            <h3 className="ms-2 text-sm font-semibold">edit category</h3>
+          </div>
+          <h3 className="ms-2 text-sm font-semibold">computer</h3>
+        </div>
       </div>
     </div>
   );
@@ -223,8 +356,15 @@ export function CourseCreationSideB() {
 
 export default function LMSPage() {
   return (
-    <>
-      <CourseCreationSideB />
-    </>
+    <div className="w-full gap-5">
+      <CourseCreationHeader />
+      <div className="p-5 flex flex-wrap items-center justify-center gap-5">
+        <CourseCreationBody />
+        {/* new block to right side */}
+        <CourseChapters />
+        <SellYourCourse />
+        <CourseAttachments />
+      </div>
+    </div>
   );
 }
