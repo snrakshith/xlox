@@ -18,13 +18,13 @@ export function CourseCard() {
         />
       </div>
       <div className="flex flex-col items-start bg-white py-5 px-2">
-        <p className="text-xl font-medium text-indigo-600">
+        <p className="text-xl font-medium hover:text-indigo-600">
           <a href="#" className="hover:underline">
             Cinematic Techinques
           </a>
         </p>
         <Link to={"/"} className="block">
-          <p className="text-sm font-semibold text-gray-900">Filming</p>
+          <p className="text-sm font-semibold text-gray-500">Filming</p>
           <span className="mt-6 flex">
             <BookOpen
               size={26}
