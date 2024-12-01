@@ -1,6 +1,7 @@
 {
   "name": "xlox",
   "version": "0.1.0",
+  "homepage": "https://xlox.in",
   "private": true,
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
@@ -28,19 +29,21 @@
     "clsx": "^2.1.0",
     "env-cmd": "^10.1.0",
     "framer-motion": "^11.0.24",
+    "lucide-react": "^0.462.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.49.3",
     "react-icons": "^5.0.1",
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
+    "recharts": "^2.13.3",
     "tailwind-merge": "^2.2.0",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.22.4"
   },
   "scripts": {
     "dev": "env-cmd -f ./src/utils/environments/.env.dev craco start",
-    "start": "env-cmd -f ./src/utils/environments/.env.prod craco start",
+    "start": "craco start",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject"
@@ -64,13 +67,13 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^7.1.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.70",
-    "@types/react": "^18.2.47",
-    "@types/react-dom": "^18.2.18",
-    "@craco/craco": "^7.1.0",
     "@types/prismjs": "^1.26.3",
+    "@types/react": "^18.2.47",
     "@types/react-color": "^3.0.12",
+    "@types/react-dom": "^18.2.18",
     "@types/react-router-dom": "^5.3.3",
     "autoprefixer": "^10.4.16",
     "path": "^0.12.7",
